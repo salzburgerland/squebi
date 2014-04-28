@@ -74,6 +74,20 @@ require([
             "selectService": "http://example.org/sparql/select",
             "updateService": "http://example.org/sparql/update",
             "samples": [
+                {
+                    "name": "First 10 events taking place in May 2014",
+                    "value": "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                             "PREFIX cal: <http://www.w3.org/2002/12/cal#>\n" +
+                             "SELECT ?s ?start ?end WHERE {\n" +
+                             " ?s a <http://schema.org/Event> ;\n" +
+                             "    cal:dtstart ?start ;\n" +
+                             "    cal:dtend ?end .\n" +
+                             " FILTER (\n" +
+                             "  ?start >= '2014-05-01'^^xsd:date\n" +
+                             "  || ?end < '2014-06-01'^^xsd:date\n" +
+                             " )\n" +
+                             "} LIMIT 10"
+                },
                 {"name":"Select first 10 triples", "value":"SELECT * WHERE {\n  ?subject ?property ?object\n} LIMIT 10","type":"browse"},
                 {"name":"List types", "value":"SELECT DISTINCT ?type WHERE {\n  [] a ?type\n} ORDER BY ?type","type":"browse"},
                 {"name":"List properties", "value":"SELECT DISTINCT ?property WHERE {\n  [] ?property []\n} ORDER BY ?property","type":"browse"},
