@@ -93,7 +93,16 @@ require([
                 "http://xmlns.com/foaf/0.1/":"foaf",
                 "http://purl.org/dc/terms/":"dct",
                 "http://www.w3.org/ns/ma-ont#":"ma",
-                "http://purl.org/dc/elements/1.1/":"dc"
+                "http://purl.org/dc/elements/1.1/":"dc",
+                "http://schema.org/": "schema",
+                "http://purl.org/NET/c4dm/event.owl#": "event",
+                "http://www.w3.org/2002/12/cal#": "cal",
+                "http://www.w3.org/2003/01/geo/wgs84_pos#": "geo",
+                "http://www.w3.org/2006/time#": "time",
+                "http://open.vocab.org/terms/": "ov",
+                "http://www.loa-cnr.it/ontologies/DUL.owl#": "dul",
+                "http://www.w3.org/2006/vcard/ns#": "vcard",
+                "http://linkedevents.org/ontology/": "lod"
             },
             "updateAllowed": true
         }
