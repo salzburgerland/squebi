@@ -84,7 +84,7 @@ require([
                              "    cal:dtend ?end .\n" +
                              " FILTER (\n" +
                              "  ?start < '2014-04-01'^^xsd:date\n" +
-                             "  || ?end >= '2014-05-01'^^xsd:date\n" +
+                             "  && ?end >= '2014-05-01'^^xsd:date\n" +
                              " )\n" +
                              "} LIMIT 10"
                 },
@@ -105,7 +105,7 @@ require([
                         "      rdfs:label ?placeName .\n" +
                         "  FILTER (\n" +
                         "  ?start < '2014-04-01'^^xsd:date\n" +
-                        "  || ?end >= '2014-05-01'^^xsd:date\n" +
+                        "  && ?end >= '2014-05-01'^^xsd:date\n" +
                     "  )\n" +
                     "} LIMIT 10\n"
                 },
@@ -126,7 +126,7 @@ require([
                         "      rdfs:label ?placeName .\n" +
                         "  FILTER (\n" +
                         "  ?start < '2014-04-01'^^xsd:date\n" +
-                        "  || ?end >= '2014-05-01'^^xsd:date\n" +
+                        "  && ?end >= '2014-05-01'^^xsd:date\n" +
                     "  )\n" +
                     "} LIMIT 10\n"
                 }
