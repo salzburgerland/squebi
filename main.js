@@ -83,8 +83,8 @@ require([
                              "    cal:dtstart ?start ;\n" +
                              "    cal:dtend ?end .\n" +
                              " FILTER (\n" +
-                             "  ?start >= '2014-05-01'^^xsd:date\n" +
-                             "  || ?end < '2014-06-01'^^xsd:date\n" +
+                             "  ?start < '2014-04-01'^^xsd:date\n" +
+                             "  || ?end >= '2014-05-01'^^xsd:date\n" +
                              " )\n" +
                              "} LIMIT 10"
                 },
@@ -104,8 +104,8 @@ require([
                         "  ?place gn:parentADM2 <http://rdf.salzburgerland.com/events/place/4d50ce3e-a0f9-4c86-8df2-8124035f2acb> ;\n" +
                         "      rdfs:label ?placeName .\n" +
                         "  FILTER (\n" +
-                        "	  ?start >= '2014-05-01'^^xsd:date \n" +
-                    "    || ?end < '2014-06-01'^^xsd:date\n" +
+                        "  ?start < '2014-04-01'^^xsd:date\n" +
+                        "  || ?end >= '2014-05-01'^^xsd:date\n" +
                     "  )\n" +
                     "} LIMIT 10\n"
                 },
@@ -125,17 +125,11 @@ require([
                         "  ?place gn:parentADM2 <http://rdf.salzburgerland.com/events/place/f23104b7-fee9-4838-a1e4-ea7732785c7c> ;\n" +
                         "      rdfs:label ?placeName .\n" +
                         "  FILTER (\n" +
-                        "	  ?start >= '2014-05-01'^^xsd:date \n" +
-                    "    || ?end < '2014-06-01'^^xsd:date\n" +
+                        "  ?start < '2014-04-01'^^xsd:date\n" +
+                        "  || ?end >= '2014-05-01'^^xsd:date\n" +
                     "  )\n" +
                     "} LIMIT 10\n"
-                },
-                {"name":"Select first 10 triples", "value":"SELECT * WHERE {\n  ?subject ?property ?object\n} LIMIT 10","type":"browse"},
-                {"name":"List types", "value":"SELECT DISTINCT ?type WHERE {\n  [] a ?type\n} ORDER BY ?type","type":"browse"},
-                {"name":"List properties", "value":"SELECT DISTINCT ?property WHERE {\n  [] ?property []\n} ORDER BY ?property","type":"browse"},
-                {"name":"List classes and count their usage as pie chart", "value":"SELECT ?class (COUNT (?s) AS ?count) WHERE {\n  ?s a ?class\n}\nGROUP BY ?class\nORDER BY DESC(?count)","type":"piechart"},
-                {"name":"Draw a graph from data", "value":"CONSTRUCT {?a ?b ?c} WHERE {?a ?b ?c} LIMIT 5", "type":"rdfdot"},
-                {"name":"Insert a new book to the bookstore","value":"PREFIX dc: <http://purl.org/dc/elements/1.1/>\nINSERT DATA {\n  <http://example/faust1> dc:title \"Faust I\" ;\n                         a <http://example/Book> ;\n                         dc:creator <http://example.org/goethe> .\n}"}
+                }
             ],
             "hints": [
                 {"container":"samples","content":"<img width='300px' src='" + SQUEBI.app + "/squebi/img/hint1.png'>","position":2,"dimension":{"width":100,"height":100},"css":"margin-top:-5px;margin-left:-10px"},
