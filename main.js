@@ -83,8 +83,8 @@ require([
                              "    cal:dtstart ?start ;\n" +
                              "    cal:dtend ?end .\n" +
                              " FILTER (\n" +
-                             "  ?start < '2014-04-01'^^xsd:date\n" +
-                             "  && ?end >= '2014-05-01'^^xsd:date\n" +
+                             "  ?start < '2014-05-01'^^xsd:date\n" +
+                             "  && ?end >= '2014-04-01'^^xsd:date\n" +
                              " )\n" +
                              "} LIMIT 10"
                 },
@@ -104,8 +104,8 @@ require([
                         "  ?place gn:parentADM2 <http://rdf.salzburgerland.com/events/place/4d50ce3e-a0f9-4c86-8df2-8124035f2acb> ;\n" +
                         "      rdfs:label ?placeName .\n" +
                         "  FILTER (\n" +
-                        "  ?start < '2014-04-01'^^xsd:date\n" +
-                        "  && ?end >= '2014-05-01'^^xsd:date\n" +
+                        "  ?start < '2014-05-01'^^xsd:date\n" +
+                        "  && ?end >= '2014-04-01'^^xsd:date\n" +
                     "  )\n" +
                     "} LIMIT 10\n"
                 },
@@ -125,8 +125,8 @@ require([
                         "  ?place gn:parentADM2 <http://rdf.salzburgerland.com/events/place/f23104b7-fee9-4838-a1e4-ea7732785c7c> ;\n" +
                         "      rdfs:label ?placeName .\n" +
                         "  FILTER (\n" +
-                        "  ?start < '2014-04-01'^^xsd:date\n" +
-                        "  && ?end >= '2014-05-01'^^xsd:date\n" +
+                        "  ?start < '2014-05-01'^^xsd:date\n" +
+                        "  && ?end >= '2014-04-01'^^xsd:date\n" +
                     "  )\n" +
                     "} LIMIT 10\n"
                 }
