@@ -75,7 +75,7 @@ require([
             "updateService": "http://example.org/sparql/update",
             "samples": [
                 {
-                    "name": "First 10 events taking place in May 2014",
+                    "name": "10 events in April 2014",
                     "value": "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
                              "PREFIX cal: <http://www.w3.org/2002/12/cal#>\n" +
                              "SELECT ?s ?start ?end WHERE {\n" +
@@ -89,7 +89,7 @@ require([
                              "} LIMIT 10"
                 },
                 {
-                    "name": "10 events in May in the Tennengebirge region",
+                    "name": "10 events in April 2014 in the Tennengebirge region",
                     "value": "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
                         "PREFIX cal: <http://www.w3.org/2002/12/cal#>\n" +
                         "PREFIX lode: <http://linkedevents.org/ontology/>\n" +
@@ -110,7 +110,7 @@ require([
                     "} LIMIT 10\n"
                 },
                 {
-                    "name": "10 events in May in the Tennengau - Dachstein West region",
+                    "name": "10 events in April 2014 in the Tennengau - Dachstein West region",
                     "value": "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
                         "PREFIX cal: <http://www.w3.org/2002/12/cal#>\n" +
                         "PREFIX lode: <http://linkedevents.org/ontology/>\n" +
