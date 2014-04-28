@@ -87,6 +87,7 @@ require([
                 {"container":"writers","content":"<img width='370px' src='" + SQUEBI.app + "/squebi/img/hint2.png'>","dimension":{"width":100,"height":100},"css":"margin-top:-30px;margin-left:-400px","position":2}
             ],
             "namespaces": {
+                "http://www.w3.org/2001/XMLSchema": "xsd",
                 "http://www.w3.org/2000/01/rdf-schema#":"rdfs",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#":"rdf",
                 "http://www.w3.org/2004/02/skos/core#":"skos",
