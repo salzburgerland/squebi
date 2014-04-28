@@ -88,6 +88,27 @@ require([
                              " )\n" +
                              "} LIMIT 10"
                 },
+                {
+                    "name": "10 events in May in the Tennengebirge region",
+                    "value": "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                        "PREFIX cal: <http://www.w3.org/2002/12/cal#>\n" +
+                        "PREFIX lode: <http://linkedevents.org/ontology/>\n" +
+                        "PREFIX gn: <http://www.geonames.org/ontology#>\n" +
+                        "\n" +
+                        "SELECT ?eventName ?start ?end ?placeName WHERE {\n" +
+                        "  ?s a <http://schema.org/Event> ;\n" +
+                        "      cal:dtstart ?start ;\n" +
+                        "      cal:dtend ?end ;\n" +
+                        "      rdfs:label ?eventName ;\n" +
+                        "      lode:atPlace ?place .\n" +
+                        "  ?place gn:parentADM2 <http://rdf.salzburgerland.com/events/place/4d50ce3e-a0f9-4c86-8df2-8124035f2acb> ;\n" +
+                        "      rdfs:label ?placeName .\n" +
+                        "  FILTER (\n" +
+                        "	  ?start >= '2014-05-01'^^xsd:date \n" +
+                    "    || ?end < '2014-06-01'^^xsd:date\n" +
+                    "  )\n" +
+                    "} LIMIT 10\n"
+                },
                 {"name":"Select first 10 triples", "value":"SELECT * WHERE {\n  ?subject ?property ?object\n} LIMIT 10","type":"browse"},
                 {"name":"List types", "value":"SELECT DISTINCT ?type WHERE {\n  [] a ?type\n} ORDER BY ?type","type":"browse"},
                 {"name":"List properties", "value":"SELECT DISTINCT ?property WHERE {\n  [] ?property []\n} ORDER BY ?property","type":"browse"},
@@ -117,7 +138,7 @@ require([
                 "http://open.vocab.org/terms/": "ov",
                 "http://www.loa-cnr.it/ontologies/DUL.owl#": "dul",
                 "http://www.w3.org/2006/vcard/ns#": "vcard",
-                "http://linkedevents.org/ontology/": "lod"
+                "http://linkedevents.org/ontology/": "lode"
             },
             "updateAllowed": true
         }
